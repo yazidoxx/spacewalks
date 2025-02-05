@@ -43,8 +43,8 @@ def write_dataframe_to_csv(df, output_file):
 
 print("--START--")
 
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva_data.json', 'r')
+output_file = open('./eva_data.csv', 'w')
 graph_file = './cumulative_eva_graph.png'
 
 # Read the data from JSON file

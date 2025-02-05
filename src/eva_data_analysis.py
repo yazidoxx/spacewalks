@@ -15,12 +15,12 @@ def read_json_to_dataframe(input_file):
     """
     print(f'Reading JSON file {input_file}')
     # Read the data from a JSON file into a Pandas dataframe
-    eva_df = pd.read_json(input_file, convert_dates=['date'])
-    eva_df['eva'] = eva_df['eva'].astype(float)  # Ensure 'eva' column is of float type
+    df = pd.read_json(input_file, convert_dates=['date'])
+    df['eva'] = df['eva'].astype(float)  # Ensure 'eva' column is of float type
     # Clean the data by removing any incomplete rows and sort by date
-    eva_df.dropna(axis=0, inplace=True)  # Remove rows with missing values
-    eva_df.sort_values('date', inplace=True)  # Sort the dataframe by date
-    return eva_df
+    df.dropna(axis=0, inplace=True)  # Remove rows with missing values
+    df.sort_values('date', inplace=True)  # Sort the dataframe by date
+    return df
 
 
 def write_dataframe_to_csv(df, output_file):

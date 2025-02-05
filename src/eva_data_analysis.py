@@ -45,9 +45,9 @@ if __name__ == "__main__":
     print("--START--")
 
     # Define input and output file paths
-    input_file_path = './eva_data.json'
-    output_file_path = './eva_data.csv'
-    graph_file_path = './cumulative_eva_graph.png'
+    input_file_path = './data/eva_data.json'
+    output_file_path = './processed_data/eva_data.csv'
+    graph_file_path = './results/cumulative_eva_graph.png'
 
     # Read the data from JSON file
     eva_data = read_json_to_dataframe(input_file_path)

@@ -5,7 +5,7 @@ import os
 # Add the src directory to the system path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from eva_data_analysis import text_to_duration, calculate_crew_size
+from eva_data_analysis.eva_data_analysis import text_to_duration, calculate_crew_size
 
 def test_text_to_duration_integer():
     """Test the text_to_duration function with an integer duration."""

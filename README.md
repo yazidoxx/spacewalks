@@ -1,67 +1,58 @@
-# EVA Data Analysis
+# Spacewalks
 
 ## Overview
+Spacewalks is a Python analysis tool for researchers to generate visualisations
+and statistical summaries of NASA's extravehicular activity datasets.
 
-The `eva_analysis.py` script processes EVA (Extravehicular Activity) data from NASA. It reads data from a JSON file, converts it into a CSV format, and generates a plot showing the total time spent in space over the years.
+## Features
+Key features of Spacewalks:
 
-## Requirements
-
-- Python 3.x
-- Libraries:
-  - `json`
-  - `csv`
-  - `datetime`
-  - `matplotlib`
-  - `pandas`
-
-## Setting Up a Virtual Environment
-
-1. **Create a virtual environment**:
-   ```bash
-   python -m venv venv
-   ```
-
-2. **Activate the virtual environment**:
-   - On Windows:
-     ```bash
-     venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source venv/bin/activate
-     ```
-
-3. **Install the required libraries**:
-   ```bash
-   pip install matplotlib pandas
-   ```
-
-## Data Sources
-
-The script uses the EVA data from the following source:
-- [NASA EVA Data](https://data.nasa.gov/resource/eva.json)
-
-Make sure to download the data and save it as `eva_data.json` in the same directory as the script.
-
-## Usage
-
-1. Place the `eva_data.json` file in the same directory as `eva_analysis.py`.
-2. Run the script:
-
-```bash
-python eva_analysis.py
-```
-
-3. The script will generate a CSV file named `eva_data.csv` and a plot saved as `myplot.png`.
-
-## Output
-
-- `eva_data.csv`: A CSV file containing the processed EVA data.
-- `myplot.png`: A plot showing the total time spent in space over the years.
-
-## Notes
-
-- The script currently processes a fixed number of lines (374) from the JSON file. Adjust this number if necessary based on the actual data size.
-- The script prints the processed data to the console for verification.
+- Generates a CSV table of summary statistics of extravehicular activity crew sizes
+- Generates a line plot to show the cumulative duration of space walks over time
 
 
+## Pre-requisites
+
+Spacewalks was developed using Python version 3.12
+
+To install and run Spacewalks you will need have Python >=3.12
+installed. You will also need the following libraries (minimum versions in brackets)
+
+- [NumPy](https://www.numpy.org/) >=2.0.0 - Spacewalk's test suite uses NumPy's statistical functions
+- [Matplotlib](https://matplotlib.org/stable/index.html) >=3.0.0  - Spacewalks uses Matplotlib to make plots
+- [pytest](https://docs.pytest.org/en/8.2.x/#) >=8.2.0  - Spacewalks uses pytest for testing
+- [pandas](https://pandas.pydata.org/) >= 2.2.0 - Spacewalks uses pandas for data frame manipulation 
+
+## Installation instructions
+
++ Clone the Spacewalks repository to your local machine using Git.
+If you don't have Git installed, you can download it from the official Git website.
+
+\`\`\`
+git clone https://github.com/your-repository-url/spacewalks.git
+cd spacewalks
+\`\`\`
+
++ Install the necessary dependencies:
+\`\`\`
+python3 -m pip install pandas==2.2.2 matplotlib==3.8.4 numpy==2.0.0 pytest==7.4.2
+\`\`\`
+
++ To ensure everything is working correctly, run the tests using pytest.
+
+\`\`\`
+python3 -m pytest
+\`\`\`
+
+## Usage Example
+
+To run an analysis using the eva_data_analysis.py script from the command line terminal,
+launch the script using Python as follows:
+
+\`\`\`
+# Usage Examples
+python3 eva_data_analysis.py eva-data.json eva-data.csv
+\`\`\`
+
+The first argument is path to the JSON data file.
+The second argument is the path the CSV output file.

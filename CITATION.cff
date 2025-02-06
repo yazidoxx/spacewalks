@@ -1,0 +1,26 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Spacewalks
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: YAZID
+    family-names: ZALAI
+    email: yazid.zalai@bih-charite.de
+    orcid: 'https://orcid.org/0009-0006-0550-5974'
+    affiliation: BIH @ Charité
+repository-code: 'https://github.com/yazidoxx/spacewalks'
+abstract: >-
+  Spacewalks is a Python analysis tool for researchers to
+  generate visualisations and statistical summaries of
+  NASA's extravehicular activity datasets.
+keywords:
+  - data analysis
+  - visualizations
+license: MIT
+version: '1.0'
+date-released: '2025-02-06'

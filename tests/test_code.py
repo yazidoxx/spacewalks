@@ -1,4 +1,10 @@
 import pytest 
+import sys
+import os
+
+# Add the src directory to the system path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
 from eva_data_analysis import text_to_duration, calculate_crew_size
 
 def test_text_to_duration_integer():
@@ -19,7 +25,6 @@ def test_calculate_crew_size(input_value, expected_results):
     Test the calculate_crew_size function with various crew entries.
     """
     
-    # Typical value 1: A crew with 3 members
     actual_result = calculate_crew_size(input_value)
     expected_result = expected_results
     assert actual_result == expected_result

@@ -50,7 +50,7 @@ launch the script using Python as follows:
 
 ```
 # Usage Examples
-python3 eva_data_analysis.py eva-data.json eva-data.csv
+python3 src/eva_data_analysis.py data/eva_data.json processed_data/eva_data.csv
 ```
 
 The first argument is path to the JSON data file.
